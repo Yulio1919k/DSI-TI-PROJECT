@@ -35,7 +35,7 @@
     </nav>
 
     <!-- Cabecera -->
-    <header class="masthead" style="background-image: url('{% static 'core/img/Peaky-Blinders.jpg' %}')">
+    <header class="masthead" style="background-image: url('{% static 'core/img/portfolio-bg.jpg' %}')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
@@ -51,6 +51,8 @@
 
     <!-- Contenido Principal -->
     <div class="container mt-5">
+
+   <!-- Proyecto -->
       {% for proyecto in portfolio %}
       <div class="row mb-5">
           <div class="col-lg-3 col-md-4">
@@ -111,4 +113,5 @@
     <script src="{% static 'core/js/clean-blog.min.js' %}"></script>
 
   </body>
+
 </html>
