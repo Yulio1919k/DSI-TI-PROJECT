@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib import admin
-from core.models import Persona
+from .models import Persona
 
 @admin.register(Persona)
 class PersonaAdmin(admin.ModelAdmin):
