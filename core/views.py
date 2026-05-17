@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from core.models import Persona
 from portfolio.models import portfolio as port
 
 def index(request):
@@ -9,7 +10,12 @@ def about(request):
     return render(request, 'core/about.html')
 
 def contact(request):
-    return render(request, 'core/contact.html')
+
+    personas = Persona.objects.all()
+
+    return render(request, 'core/contact.html', {
+        'personas': personas
+    })
 
 def portfolio_view(request):
     portfolio = port.objects.all()
